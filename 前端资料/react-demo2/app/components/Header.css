@@ -1,0 +1,6 @@
+.fitment-header-container {
+    display: flex;
+    height: 56px;
+    background: #4285f4;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}

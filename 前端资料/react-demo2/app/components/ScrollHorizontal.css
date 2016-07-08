@@ -1,0 +1,50 @@
+.scroll-container {
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    position: relative;
+
+}
+
+.scroll-items-container {
+    /*width: 200px;*/
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0px;
+}
+
+.scroll-item {
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    flex-shrink: 0;
+}
+
+.scroll-in {
+    /*transition-property: left;*/
+    transition-duration: 1s;
+    backface-visibility: hidden;
+    /*left: 0px;*/
+}
+
+.scroll-out {
+    transition-property: left;
+    transition-duration: 10s;
+    left: 200px;
+}
+
+.scroll-item-1 {
+    background: #009926;
+}
+.scroll-item-2 {
+    background: #000000;
+}
+.scroll-item-3 {
+    background: #686868;
+}
+.scroll-item-4 {
+    background: #dd1144;
+}
+
