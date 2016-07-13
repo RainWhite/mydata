@@ -1,20 +1,24 @@
 <!DOCTYPE html><html><head><title>数据库设计</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
                         <div id="wmd-preview" class="preview-content"></div>
-                    <div id="wmd-preview-section-184" class="wmd-preview-section preview-content">
+                    <div id="wmd-preview-section-1" class="wmd-preview-section preview-content">
 
-</div><div id="wmd-preview-section-3924" class="wmd-preview-section preview-content">
+</div><div id="wmd-preview-section-34" class="wmd-preview-section preview-content">
 
 <h1 id="数据库设计">数据库设计</h1>
 
 <div><div class="toc"><div class="toc">
 <ul>
 <li><a href="#数据库设计">数据库设计</a><ul>
+<li><a href="#商家表">商家表</a></li>
 <li><a href="#一级分类表">一级分类表</a></li>
 <li><a href="#二级分类表">二级分类表</a></li>
 <li><a href="#商品类别表三级分类表">商品类别表（三级分类表）</a></li>
 <li><a href="#商品类别属性表">商品类别属性表</a></li>
 <li><a href="#商品表">商品表</a></li>
 <li><a href="#商品属性表">商品属性表</a></li>
+<li><a href="#商家客户表">商家客户表</a></li>
+<li><a href="#商家所属客户关系表一个各户有多家店">商家所属客户关系表（一个各户有多家店）</a></li>
+<li><a href="#用户表">用户表</a></li>
 </ul>
 </li>
 </ul>
@@ -22,7 +26,31 @@
 </div>
 </div>
 
-</div><div id="wmd-preview-section-5093" class="wmd-preview-section preview-content">
+</div><div id="wmd-preview-section-800" class="wmd-preview-section preview-content">
+
+<h2 id="商家表">商家表</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="center">商家id</th>
+  <th align="center">商家名称</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">1</td>
+  <td align="center">红木实业</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td align="center">梦幻人家</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td align="center">马可波罗</td>
+</tr>
+</tbody></table>
+</div><div id="wmd-preview-section-3" class="wmd-preview-section preview-content">
 
 <h2 id="一级分类表">一级分类表</h2>
 
@@ -46,7 +74,9 @@
   <td align="center">主材</td>
 </tr>
 </tbody></table>
-</div><div id="wmd-preview-section-5078" class="wmd-preview-section preview-content">
+
+
+</div><div id="wmd-preview-section-4" class="wmd-preview-section preview-content">
 
 <h2 id="二级分类表">二级分类表</h2>
 
@@ -129,7 +159,9 @@
   <td align="center">3</td>
 </tr>
 </tbody></table>
-</div><div id="wmd-preview-section-5879" class="wmd-preview-section preview-content">
+
+
+</div><div id="wmd-preview-section-659" class="wmd-preview-section preview-content">
 
 <h2 id="商品类别表三级分类表">商品类别表（三级分类表）</h2>
 
@@ -162,7 +194,7 @@
   <td align="center">14</td>
 </tr>
 </tbody></table>
-</div><div id="wmd-preview-section-5896" class="wmd-preview-section preview-content">
+</div><div id="wmd-preview-section-6" class="wmd-preview-section preview-content">
 
 <h2 id="商品类别属性表">商品类别属性表</h2>
 
@@ -200,7 +232,9 @@
   <td align="center">规格</td>
 </tr>
 </tbody></table>
-</div><div id="wmd-preview-section-6065" class="wmd-preview-section preview-content">
+
+
+</div><div id="wmd-preview-section-742" class="wmd-preview-section preview-content">
 
 <h2 id="商品表">商品表</h2>
 
@@ -211,6 +245,7 @@
   <th align="center">类别id</th>
   <th align="center">商品名称</th>
   <th align="center">价格</th>
+  <th align="center">商家id</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -218,27 +253,31 @@
   <td align="center">1</td>
   <td align="center">1号床</td>
   <td align="center">1000</td>
+  <td align="center">1</td>
 </tr>
 <tr>
   <td align="center">2</td>
   <td align="center">1</td>
   <td align="center">2号床</td>
   <td align="center">2000</td>
+  <td align="center">1</td>
 </tr>
 <tr>
   <td align="center">3</td>
   <td align="center">2</td>
   <td align="center">1号沙发</td>
   <td align="center">3000</td>
+  <td align="center">2</td>
 </tr>
 <tr>
   <td align="center">4</td>
   <td align="center">2</td>
   <td align="center">2号沙发</td>
   <td align="center">4000</td>
+  <td align="center">3</td>
 </tr>
 </tbody></table>
-</div><div id="wmd-preview-section-5866" class="wmd-preview-section preview-content">
+</div><div id="wmd-preview-section-833" class="wmd-preview-section preview-content">
 
 <h2 id="商品属性表">商品属性表</h2>
 
@@ -263,7 +302,7 @@
 <tr>
   <td align="center">1</td>
   <td align="center">3</td>
-  <td align="center">CRT 14</td>
+  <td align="center">双人床</td>
 </tr>
 <tr>
   <td align="center">2</td>
@@ -299,6 +338,106 @@
   <td align="center">4</td>
   <td align="center">2</td>
   <td align="center">波轮</td>
+</tr>
+</tbody></table>
+</div><div id="wmd-preview-section-1703" class="wmd-preview-section preview-content">
+
+<h2 id="商家客户表">商家客户表</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="center">客户id</th>
+  <th>账号</th>
+  <th align="center">密码</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">1</td>
+  <td>邮箱</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td>手机</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td>字符</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">4</td>
+  <td>QQ</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">5</td>
+  <td>微博</td>
+  <td align="center">MD5加密</td>
+</tr>
+</tbody></table>
+</div><div id="wmd-preview-section-2066" class="wmd-preview-section preview-content">
+
+<h2 id="商家所属客户关系表一个各户有多家店">商家所属客户关系表（一个各户有多家店）</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="center">客户id</th>
+  <th align="center">商家id</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">1</td>
+  <td align="center">1</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td align="center">2</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td align="center">2</td>
+</tr>
+</tbody></table>
+</div><div id="wmd-preview-section-2126" class="wmd-preview-section preview-content">
+
+<h2 id="用户表">用户表</h2>
+
+<table>
+<thead>
+<tr>
+  <th align="center">用户id</th>
+  <th>账号</th>
+  <th align="center">密码</th>
+</tr>
+</thead>
+<tbody><tr>
+  <td align="center">1</td>
+  <td>邮箱</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">2</td>
+  <td>手机</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">3</td>
+  <td>字符</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">4</td>
+  <td>QQ</td>
+  <td align="center">MD5加密</td>
+</tr>
+<tr>
+  <td align="center">5</td>
+  <td>微博</td>
+  <td align="center">MD5加密</td>
 </tr>
 </tbody></table>
 </div><div id="wmd-preview-section-footnotes" class="preview-content"></div></div></body></html>
